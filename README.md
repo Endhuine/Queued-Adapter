@@ -11,6 +11,7 @@ configurable. Maybe I'll add it up the option of multiple update strategy
 
 Import the library using jitpack
 
+## Setup
 In your top gradle build add:
 
 ```gradle
