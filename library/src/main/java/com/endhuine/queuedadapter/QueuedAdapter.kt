@@ -1,8 +1,8 @@
 package com.endhuine.queuedadapter
 
-import android.support.annotation.MainThread
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import androidx.annotation.MainThread
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
@@ -10,7 +10,7 @@ import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.launch
 import java.util.*
 
-abstract class QueuedAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView.Adapter<VH>() {
+abstract class QueuedAdapter<T, VH : androidx.recyclerview.widget.RecyclerView.ViewHolder> : androidx.recyclerview.widget.RecyclerView.Adapter<VH>() {
 
     protected var mDataset: ArrayList<T> = arrayListOf()
     private var mDiffCallback = DiffCallback()

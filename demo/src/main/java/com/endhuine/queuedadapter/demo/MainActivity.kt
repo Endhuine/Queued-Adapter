@@ -1,9 +1,7 @@
 package com.endhuine.queuedadapter.demo
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import com.endhuine.queuedadapter.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -40,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         main_recycler.adapter = myQueuedAdapter
-        main_recycler.layoutManager = LinearLayoutManager(this)
+        main_recycler.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         fab.setOnClickListener { _ ->
             val namesShuf = names.shuffled()
             val size = (2 until names.size).shuffled().first()
